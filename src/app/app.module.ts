@@ -7,9 +7,11 @@ import { HeaderComponent } from './components/layout/header/header.component';
 import { AuthModule } from './module/auth/auth/auth.module';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './components/auth/login/login.component';
+import { NgxWebstorageModule } from 'ngx-webstorage';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent],
+  declarations: [AppComponent, HeaderComponent, LoginComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -17,6 +19,7 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     HttpClientModule,
     AuthModule,
+    NgxWebstorageModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent],
