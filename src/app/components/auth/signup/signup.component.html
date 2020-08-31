@@ -7,7 +7,7 @@
           <h4>Register</h4>
         </div>
         <div class="card-body">
-          <form>
+          <form [formGroup]="signUpForm">
             <div class="form-group row">
               <label
                 for="email_address"
@@ -17,12 +17,20 @@
               <div class="col-md-6">
                 <input
                   type="text"
+                  [formControlName]="'email'"
                   id="email_address"
                   class="form-control"
                   name="email-address"
                   required
                   autofocus
                 />
+                <span
+                  *ngIf="
+                    !signUpForm.get('email').valid &&
+                    signUpForm.get('email').touched
+                  "
+                  >Please provide a valid email</span
+                >
               </div>
             </div>
 
@@ -31,7 +39,20 @@
                 >User Name</label
               >
               <div class="col-md-6">
-                <input type="text" class="form-control" required autofocus />
+                <input
+                  type="text"
+                  [formControlName]="'username'"
+                  class="form-control"
+                  required
+                  autofocus
+                />
+                <span
+                  *ngIf="
+                    !signUpForm.get('username').valid &&
+                    signUpForm.get('username').touched
+                  "
+                  >Please provide a valir username</span
+                >
               </div>
             </div>
 
@@ -44,11 +65,19 @@
               <div class="col-md-6">
                 <input
                   type="password"
+                  [formControlName]="'password'"
                   id="password"
                   class="form-control"
                   name="password"
                   required
                 />
+                <span
+                  *ngIf="
+                    !signUpForm.get('password').valid &&
+                    signUpForm.get('password').touched
+                  "
+                  >Please provide a valid password</span
+                >
               </div>
             </div>
 
