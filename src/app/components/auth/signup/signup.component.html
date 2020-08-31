@@ -7,7 +7,7 @@
           <h4>Register</h4>
         </div>
         <div class="card-body">
-          <form [formGroup]="signUpForm">
+          <form [formGroup]="signUpForm" (ngSubmit)="signUp()">
             <div class="form-group row">
               <label
                 for="email_address"
