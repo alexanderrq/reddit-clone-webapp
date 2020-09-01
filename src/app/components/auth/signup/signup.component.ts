@@ -34,7 +34,7 @@ export class SignupComponent implements OnInit {
     });
   }
 
-  signUp() {
+  signUp(): void {
     this.signUpRequestPayload.username = this.signUpForm.get('username').value;
     this.signUpRequestPayload.email = this.signUpForm.get('email').value;
     this.signUpRequestPayload.password = this.signUpForm.get('password').value;
