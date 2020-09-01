@@ -14,6 +14,10 @@ import { SignupComponent } from './components/auth/signup/signup.component';
 import { TokenInterceptor } from './token-interceptor';
 import { HomeComponent } from './components/layout/home/home.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { PostTileComponent } from './components/post/post-tile/post-tile.component';
+import { VoteButtonComponent } from './components/post/vote-button/vote-button.component';
+import { SideBarComponent } from './components/layout/side-bar/side-bar.component';
+import { SubredditSideBarComponent } from './components/layout/subreddit-side-bar/subreddit-side-bar.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +26,10 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     LoginComponent,
     SignupComponent,
     HomeComponent,
+    PostTileComponent,
+    VoteButtonComponent,
+    SideBarComponent,
+    SubredditSideBarComponent,
   ],
   imports: [
     BrowserModule,
