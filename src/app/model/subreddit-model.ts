@@ -1,6 +1,6 @@
 export interface SubredditModel {
   description: string;
-  id: number;
+  id?: number;
   name: string;
-  postCount: number;
+  postCount?: number;
 }
