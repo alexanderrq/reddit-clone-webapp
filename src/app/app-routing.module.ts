@@ -6,6 +6,7 @@ import { HomeComponent } from './components/layout/home/home.component';
 import { CreatePostComponent } from './components/post/create-post/create-post.component';
 import { CreateSubredditComponent } from './components/subreddit/create-subreddit/create-subreddit.component';
 import { ListSubredditsComponent } from './components/subreddit/list-subreddits/list-subreddits.component';
+import { ViewPostComponent } from './components/post/view-post/view-post.component';
 
 const routes: Routes = [
   {
@@ -31,6 +32,10 @@ const routes: Routes = [
   {
     path: 'list-subreddits',
     component: ListSubredditsComponent,
+  },
+  {
+    path: 'view-post/:postId',
+    component: ViewPostComponent,
   },
 ];
 

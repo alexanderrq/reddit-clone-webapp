@@ -8,7 +8,7 @@ import { PostModel } from 'src/app/model/post-model';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
-  posts: Array<PostModel> = [];
+  posts: Array<PostModel>;
 
   constructor(private postService: PostService) {
     this.postService.getAllPosts().subscribe((post) => {
